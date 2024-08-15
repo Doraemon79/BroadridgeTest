@@ -1,0 +1,142 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Repos\\BroadridgeTest\\Broadridge\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1915F887-F984-42B7-A52D-FF2C6198DE0F}|Broadridge\\Broadridge.csproj|c:\\repos\\broadridgetest\\broadridge\\broadridge\\logic\\frequecycalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1915F887-F984-42B7-A52D-FF2C6198DE0F}|Broadridge\\Broadridge.csproj|solutionrelative:broadridge\\logic\\frequecycalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A437494C-55C4-475C-9973-9314FA30F634}|BroadRidgeTests\\BroadRidgeTests.csproj|c:\\repos\\broadridgetest\\broadridge\\broadridgetests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A437494C-55C4-475C-9973-9314FA30F634}|BroadRidgeTests\\BroadRidgeTests.csproj|solutionrelative:broadridgetests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1915F887-F984-42B7-A52D-FF2C6198DE0F}|Broadridge\\Broadridge.csproj|c:\\repos\\broadridgetest\\broadridge\\broadridge\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1915F887-F984-42B7-A52D-FF2C6198DE0F}|Broadridge\\Broadridge.csproj|solutionrelative:broadridge\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1915F887-F984-42B7-A52D-FF2C6198DE0F}|Broadridge\\Broadridge.csproj|c:\\repos\\broadridgetest\\broadridge\\broadridge\\logic\\helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1915F887-F984-42B7-A52D-FF2C6198DE0F}|Broadridge\\Broadridge.csproj|solutionrelative:broadridge\\logic\\helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1915F887-F984-42B7-A52D-FF2C6198DE0F}|Broadridge\\Broadridge.csproj|c:\\repos\\broadridgetest\\broadridge\\broadridge\\logic\\interfaces\\ihelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1915F887-F984-42B7-A52D-FF2C6198DE0F}|Broadridge\\Broadridge.csproj|solutionrelative:broadridge\\logic\\interfaces\\ihelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1915F887-F984-42B7-A52D-FF2C6198DE0F}|Broadridge\\Broadridge.csproj|c:\\repos\\broadridgetest\\broadridge\\broadridge\\logic\\interfaces\\ifrequencycalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1915F887-F984-42B7-A52D-FF2C6198DE0F}|Broadridge\\Broadridge.csproj|solutionrelative:broadridge\\logic\\interfaces\\ifrequencycalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Repos\\BroadridgeTest\\Broadridge\\BroadRidgeTests\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "BroadRidgeTests\\UnitTest1.cs",
+              "ToolTip": "C:\\Repos\\BroadridgeTest\\Broadridge\\BroadRidgeTests\\UnitTest1.cs",
+              "RelativeToolTip": "BroadRidgeTests\\UnitTest1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-15T14:59:08.243Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IHelper.cs",
+              "DocumentMoniker": "C:\\Repos\\BroadridgeTest\\Broadridge\\Broadridge\\Logic\\Interfaces\\IHelper.cs",
+              "RelativeDocumentMoniker": "Broadridge\\Logic\\Interfaces\\IHelper.cs",
+              "ToolTip": "C:\\Repos\\BroadridgeTest\\Broadridge\\Broadridge\\Logic\\Interfaces\\IHelper.cs",
+              "RelativeToolTip": "Broadridge\\Logic\\Interfaces\\IHelper.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-15T14:52:45.004Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Helper.cs",
+              "DocumentMoniker": "C:\\Repos\\BroadridgeTest\\Broadridge\\Broadridge\\Logic\\Helper.cs",
+              "RelativeDocumentMoniker": "Broadridge\\Logic\\Helper.cs",
+              "ToolTip": "C:\\Repos\\BroadridgeTest\\Broadridge\\Broadridge\\Logic\\Helper.cs",
+              "RelativeToolTip": "Broadridge\\Logic\\Helper.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAQAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-15T14:52:24.748Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FrequecyCalculator.cs",
+              "DocumentMoniker": "C:\\Repos\\BroadridgeTest\\Broadridge\\Broadridge\\Logic\\FrequecyCalculator.cs",
+              "RelativeDocumentMoniker": "Broadridge\\Logic\\FrequecyCalculator.cs",
+              "ToolTip": "C:\\Repos\\BroadridgeTest\\Broadridge\\Broadridge\\Logic\\FrequecyCalculator.cs",
+              "RelativeToolTip": "Broadridge\\Logic\\FrequecyCalculator.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAqwA4AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-15T14:51:28.417Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IFrequencyCalculator.cs",
+              "DocumentMoniker": "C:\\Repos\\BroadridgeTest\\Broadridge\\Broadridge\\Logic\\Interfaces\\IFrequencyCalculator.cs",
+              "RelativeDocumentMoniker": "Broadridge\\Logic\\Interfaces\\IFrequencyCalculator.cs",
+              "ToolTip": "C:\\Repos\\BroadridgeTest\\Broadridge\\Broadridge\\Logic\\Interfaces\\IFrequencyCalculator.cs",
+              "RelativeToolTip": "Broadridge\\Logic\\Interfaces\\IFrequencyCalculator.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-15T14:51:54.875Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Repos\\BroadridgeTest\\Broadridge\\Broadridge\\Program.cs",
+              "RelativeDocumentMoniker": "Broadridge\\Program.cs",
+              "ToolTip": "C:\\Repos\\BroadridgeTest\\Broadridge\\Broadridge\\Program.cs",
+              "RelativeToolTip": "Broadridge\\Program.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAEwAoAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-15T14:49:06.452Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
