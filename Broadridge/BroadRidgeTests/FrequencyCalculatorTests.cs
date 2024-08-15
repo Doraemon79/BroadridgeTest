@@ -1,3 +1,4 @@
+using Broadridge.Logic;
 using System.Collections.Concurrent;
 
 namespace BroadRidgeTests
@@ -52,11 +53,9 @@ namespace BroadRidgeTests
             // Act
             var result = FrequecyCalculatorService.WordFrequencyCalculator(words);
 
-
             // Assert
             Assert.Equal(response, result);
         }
 
     }
-}
 }
