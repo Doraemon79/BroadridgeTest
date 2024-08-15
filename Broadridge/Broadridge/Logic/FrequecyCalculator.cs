@@ -1,46 +1,33 @@
 ﻿using Broadridge.Logic.Interfaces;
 using System.Collections.Concurrent;
-using System.Runtime.Caching;
 
 namespace Broadridge.Logic
 {
+    /// <summary>
+    /// class to handle the frequency of words
+    /// </summary>
     public class FrequecyCalculator : IFrequencyCalculator
     {
-        private readonly MemoryCache wordCache = MemoryCache.Default;
+        /// <summary>
+        /// I tried with cache and tryGet() but with a concurrent dictionary it is faster
+        ///  with just a simple addOrUpdate
+        ///  tried using a cache with async but the results were unreliable, needs more time to study
+        /// </summary>
+        /// <param name="words"></param>
+        /// <returns></returns>
         public List<KeyValuePair<string, int>> WordFrequencyCalculator(string[] words)
         {
 
             var wordsByFrequency = new ConcurrentDictionary<string, int>(StringComparer.OrdinalIgnoreCase);
 
+
             Parallel.ForEach(words, async word =>
             {
+                wordsByFrequency.AddOrUpdate(word, 1, (key, oldValue) => oldValue + 1);
 
-                await Cachemaker(wordCache, word);
-                if (wordCache.Contains(word))
-                {
-                    wordsByFrequency.AddOrUpdate(word, 1, (key, oldValue) => oldValue + 1);
-                }
-                else
-                {
-                    wordsByFrequency.TryAdd(word, 1);
-                }
             });
-            return wordsByFrequency.OrderByDescending(x => x.Value).ThenBy(x => x.Key).ToList();
-        }
 
-
-        private async Task<bool> Cachemaker(MemoryCache cache, string word)
-        {
-            if (wordCache.Contains(word))
-            {
-                return true;
-            }
-            else
-            {
-                CacheItemPolicy policy = new CacheItemPolicy { SlidingExpiration = TimeSpan.FromMinutes(10) };
-                wordCache.Add(word, 1, policy);
-                return false;
-            }
+            return wordsByFrequency.OrderBy(x => x.Key).ThenBy(x => x.Value).ToList();
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using BenchmarkDotNet.Attributes;
 using Broadridge.Logic;
 using System.Collections.Concurrent;
+using System.Reflection;
 using System.Runtime.Caching;
 
 namespace BenchmarkTests
@@ -10,47 +11,61 @@ namespace BenchmarkTests
         private readonly MemoryCache wordCache = MemoryCache.Default;
 
         [Benchmark]
-        public List<KeyValuePair<string, int>> WithCachingBenchmark()
+        public List<KeyValuePair<string, int>> WithNoCachingBenchmark()
         {
             var FrequecyCalculatorService = new FrequecyCalculator();
-            string docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            string fileName = Path.Combine(docPath, "TestBenchmark.txt");
-            string text = File.ReadAllText(fileName);
-            var words = SplitWords(text);
+            string filePath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "TestBenchmark.txt");
+            var words = SplitWords(filePath);
 
-            return FrequecyCalculatorService.WordFrequencyCalculator(words);
+            return WordFrequencyCalculatorWithCaching(words);
 
         }
 
 
         [Benchmark]
-        public List<KeyValuePair<string, int>> NoCachingBenchmark()
+        public List<KeyValuePair<string, int>> WithCachingBenchmark()
         {
             var FrequecyCalculatorService = new FrequecyCalculator();
-            string docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            string fileName = Path.Combine(docPath, "TestBenchmark.txt");
-            string text = File.ReadAllText(fileName);
-            var words = SplitWords(text);
+            string filePath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "TestBenchmark.txt");
+            var words = SplitWords(filePath);
 
-            return WordFrequencyCalculatorNoCaching(words);
+            return FrequecyCalculatorService.WordFrequencyCalculator(words);
 
         }
-        public List<KeyValuePair<string, int>> WordFrequencyCalculatorNoCaching(string[] words)
+        public List<KeyValuePair<string, int>> WordFrequencyCalculatorWithCaching(string[] words)
         {
 
             var wordsByFrequency = new ConcurrentDictionary<string, int>(StringComparer.OrdinalIgnoreCase);
 
             Parallel.ForEach(words, async word =>
             {
+
+                await Cachemaker(wordCache, word);
                 if (wordCache.Contains(word))
                 {
                     wordsByFrequency.AddOrUpdate(word, 1, (key, oldValue) => oldValue + 1);
                 }
-
+                else
+                {
+                    wordsByFrequency.TryAdd(word, 1);
+                }
             });
+            return wordsByFrequency.OrderByDescending(x => x.Value).ThenBy(x => x.Key).ToList();
+        }
 
 
-            return wordsByFrequency.OrderBy(x => x.Key).ThenBy(x => x.Value).ToList();
+        private async Task<bool> Cachemaker(MemoryCache cache, string word)
+        {
+            if (wordCache.Contains(word))
+            {
+                return true;
+            }
+            else
+            {
+                CacheItemPolicy policy = new CacheItemPolicy { SlidingExpiration = TimeSpan.FromMinutes(10) };
+                wordCache.Add(word, 1, policy);
+                return false;
+            }
         }
 
         public string[] SplitWords(string text)

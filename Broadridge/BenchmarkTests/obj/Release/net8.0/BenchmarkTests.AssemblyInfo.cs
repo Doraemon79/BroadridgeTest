@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BenchmarkTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+78f30ab378722bbde590e37b9b0ebeb378dbef3c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b42431942003d3efb769bd1d226beb89918b2ed9")]
 [assembly: System.Reflection.AssemblyProductAttribute("BenchmarkTests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BenchmarkTests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

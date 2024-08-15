@@ -2,6 +2,9 @@
 
 namespace Broadridge.Logic
 {
+    /// <summary>
+    /// class to handle input and opuput
+    /// </summary>
     public class Helper : IHelper
     {
         public string[] SplitWords(string text)

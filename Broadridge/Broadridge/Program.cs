@@ -11,7 +11,6 @@ internal class Program
         string path = Console.ReadLine();
 
 
-
         if (!File.Exists(path))
         {
             Console.WriteLine("File does not exist.");

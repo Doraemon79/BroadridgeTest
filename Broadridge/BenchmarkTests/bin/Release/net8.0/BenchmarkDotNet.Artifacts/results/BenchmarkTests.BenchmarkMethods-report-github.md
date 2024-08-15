@@ -10,5 +10,5 @@ BenchmarkDotNet v0.14.0, Windows 11 (10.0.22631.4037/23H2/2023Update/SunValley3)
 ```
 | Method               | Mean     | Error     | StdDev    |
 |--------------------- |---------:|----------:|----------:|
-| WithCachingBenchmark | 7.247 ms | 0.1432 ms | 0.2229 ms |
-| NoCachingBenchmark   | 6.498 ms | 0.3346 ms | 0.9653 ms |
+| WithCachingBenchmark | 4.377 μs | 0.1244 μs | 0.3668 μs |
+| NoCachingBenchmark   | 2.839 μs | 0.0636 μs | 0.1795 μs |
