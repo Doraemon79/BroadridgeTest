@@ -9,8 +9,8 @@ namespace Broadridge.Logic
     public class FrequecyCalculator : IFrequencyCalculator
     {
         /// <summary>
-        /// I tried with cache and tryGet() but with a concurrent dictionary it is faster
-        ///  with just a simple addOrUpdate
+        /// I tried with cache  but with a concurrent dictionary it is faster
+        ///  with just a simple tryAdd
         ///  tried using a cache with async but the results were unreliable, needs more time to study
         /// </summary>
         /// <param name="words"></param>
@@ -20,14 +20,17 @@ namespace Broadridge.Logic
 
             var wordsByFrequency = new ConcurrentDictionary<string, int>(StringComparer.OrdinalIgnoreCase);
 
-
-            Parallel.ForEach(words, async word =>
+            //by using tryAdd I reduce the updates to the dictionary
+            Parallel.ForEach(words, word =>
             {
-                wordsByFrequency.AddOrUpdate(word, 1, (key, oldValue) => oldValue + 1);
+                if (!wordsByFrequency.TryAdd(word, 1))
+                {
 
+                    wordsByFrequency.TryUpdate(word, wordsByFrequency[word] + 1, wordsByFrequency[word]);
+                }
             });
 
-            return wordsByFrequency.OrderBy(x => x.Key).ThenBy(x => x.Value).ToList();
+            return [.. wordsByFrequency.OrderBy(x => x.Key).ThenBy(x => x.Value)];
         }
     }
 }

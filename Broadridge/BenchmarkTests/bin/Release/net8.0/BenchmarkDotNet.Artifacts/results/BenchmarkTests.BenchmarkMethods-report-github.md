@@ -8,7 +8,8 @@ BenchmarkDotNet v0.14.0, Windows 11 (10.0.22631.4037/23H2/2023Update/SunValley3)
 
 
 ```
-| Method               | Mean     | Error     | StdDev    |
-|--------------------- |---------:|----------:|----------:|
-| WithCachingBenchmark | 4.377 μs | 0.1244 μs | 0.3668 μs |
-| NoCachingBenchmark   | 2.839 μs | 0.0636 μs | 0.1795 μs |
+| Method                 | Mean     | Error     | StdDev    |
+|----------------------- |---------:|----------:|----------:|
+| WithNoCachingBenchmark | 4.238 μs | 0.0981 μs | 0.2815 μs |
+| WithTryAdd             | 2.938 μs | 0.0577 μs | 0.0965 μs |
+| WithCachingBenchmark   | 2.965 μs | 0.0583 μs | 0.0648 μs |
