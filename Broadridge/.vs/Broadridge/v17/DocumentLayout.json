@@ -71,15 +71,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "BenchmarkTests",
+              "Title": "BenchmarkTests.csproj",
               "DocumentMoniker": "C:\\Repos\\BroadridgeTest\\Broadridge\\BenchmarkTests\\BenchmarkTests.csproj",
               "RelativeDocumentMoniker": "BenchmarkTests\\BenchmarkTests.csproj",
               "ToolTip": "C:\\Repos\\BroadridgeTest\\Broadridge\\BenchmarkTests\\BenchmarkTests.csproj",
               "RelativeToolTip": "BenchmarkTests\\BenchmarkTests.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-08-15T16:39:41.316Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-15T16:39:41.316Z"
             },
             {
               "$type": "Document",
@@ -104,8 +103,7 @@
               "RelativeToolTip": "BenchmarkTests\\Program.cs",
               "ViewState": "AQIAAAgAAAAAAAAAAAAQwAcAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-15T15:07:14.52Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-15T15:07:14.52Z"
             },
             {
               "$type": "Document",
@@ -117,8 +115,7 @@
               "RelativeToolTip": "Broadridge\\Logic\\Interfaces\\IHelper.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-15T14:52:45.004Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-15T14:52:45.004Z"
             },
             {
               "$type": "Document",
@@ -130,8 +127,7 @@
               "RelativeToolTip": "Broadridge\\Logic\\Helper.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAAAUAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-15T14:52:24.748Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-15T14:52:24.748Z"
             },
             {
               "$type": "Document",
@@ -141,7 +137,7 @@
               "RelativeDocumentMoniker": "Broadridge\\Logic\\FrequecyCalculator.cs",
               "ToolTip": "C:\\Repos\\BroadridgeTest\\Broadridge\\Broadridge\\Logic\\FrequecyCalculator.cs",
               "RelativeToolTip": "Broadridge\\Logic\\FrequecyCalculator.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAswB8AAAAAAAAA",
+              "ViewState": "AQIAABAAAAAAAAAAAAAswBIAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-15T14:51:28.417Z",
               "EditorCaption": ""
