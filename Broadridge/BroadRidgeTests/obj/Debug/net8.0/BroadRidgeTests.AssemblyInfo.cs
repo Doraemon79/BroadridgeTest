@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BroadRidgeTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+839daad46d7d3b81a1dd6a51a6870267476819cc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+78f30ab378722bbde590e37b9b0ebeb378dbef3c")]
 [assembly: System.Reflection.AssemblyProductAttribute("BroadRidgeTests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BroadRidgeTests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

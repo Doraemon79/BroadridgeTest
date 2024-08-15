@@ -21,7 +21,6 @@ namespace Broadridge.Logic
                     writer.WriteLine($"{word.Key},{word.Value}\n");
                 }
             }
-
         }
     }
 }

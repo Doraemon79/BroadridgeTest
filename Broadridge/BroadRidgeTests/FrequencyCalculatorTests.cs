@@ -10,17 +10,19 @@ namespace BroadRidgeTests
         {
             // Arrange
             var FrequecyCalculatorService = new FrequecyCalculator();
-            var words = new string[] { "a", "b", "b", "c", "a", "b", "a" };
+            var words = new string[] { "a", "b", "a", "b", "c", "a", "b", "a" };
             var response = new ConcurrentDictionary<string, int>();
-            response.TryAdd("a", 3);
-            response.TryAdd("b", 3);
+
             response.TryAdd("c", 1);
+            response.TryAdd("b", 3);
+            response.TryAdd("a", 4);
+            var expected = response.OrderByDescending(x => x.Value).ThenBy(x => x.Key).ToList();
 
             // Act
             var result = FrequecyCalculatorService.WordFrequencyCalculator(words);
 
             // Assert
-            Assert.Equal(response, result);
+            Assert.Equal(expected, result);
         }
 
         [Fact]
