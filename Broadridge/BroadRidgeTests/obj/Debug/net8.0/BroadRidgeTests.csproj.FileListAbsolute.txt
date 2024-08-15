@@ -1,0 +1,6 @@
+C:\Repos\BroadridgeTest\Broadridge\BroadRidgeTests\obj\Debug\net8.0\BroadRidgeTests.csproj.AssemblyReference.cache
+C:\Repos\BroadridgeTest\Broadridge\BroadRidgeTests\obj\Debug\net8.0\BroadRidgeTests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repos\BroadridgeTest\Broadridge\BroadRidgeTests\obj\Debug\net8.0\BroadRidgeTests.AssemblyInfoInputs.cache
+C:\Repos\BroadridgeTest\Broadridge\BroadRidgeTests\obj\Debug\net8.0\BroadRidgeTests.AssemblyInfo.cs
+C:\Repos\BroadridgeTest\Broadridge\BroadRidgeTests\obj\Debug\net8.0\BroadRidgeTests.csproj.CoreCompileInputs.cache
+C:\Repos\BroadridgeTest\Broadridge\BroadRidgeTests\obj\Debug\net8.0\BroadRidgeTests.sourcelink.json

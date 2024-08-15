@@ -48,3 +48,4 @@ C:\Repos\BroadridgeTest\Broadridge\Broadridge\obj\Debug\net8.0\refint\Broadridge
 C:\Repos\BroadridgeTest\Broadridge\Broadridge\obj\Debug\net8.0\Broadridge.pdb
 C:\Repos\BroadridgeTest\Broadridge\Broadridge\obj\Debug\net8.0\Broadridge.genruntimeconfig.cache
 C:\Repos\BroadridgeTest\Broadridge\Broadridge\obj\Debug\net8.0\ref\Broadridge.dll
+C:\Repos\BroadridgeTest\Broadridge\Broadridge\obj\Debug\net8.0\Broadridge.sourcelink.json
