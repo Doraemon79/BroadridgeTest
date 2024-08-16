@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Broadridge")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0bf47422c1aa4e8cebc7fcad9724bfd035f36322")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+13bdae99b6f1fb2062ac1f734df2164a453b355e")]
 [assembly: System.Reflection.AssemblyProductAttribute("Broadridge")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Broadridge")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
