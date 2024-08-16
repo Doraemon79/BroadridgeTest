@@ -8,9 +8,10 @@ BenchmarkDotNet v0.14.0, Windows 11 (10.0.22631.4037/23H2/2023Update/SunValley3)
 
 
 ```
-| Method                     | Mean      | Error     | StdDev    | Median    |
-|--------------------------- |----------:|----------:|----------:|----------:|
-| LocalDictionariesBenchmark | 19.784 μs | 0.7012 μs | 1.9893 μs | 19.167 μs |
-| WithNoCachingBenchmark     |  3.529 μs | 0.0371 μs | 0.0290 μs |  3.529 μs |
-| WithTryAdd                 |  2.847 μs | 0.0534 μs | 0.1053 μs |  2.831 μs |
-| WithCachingBenchmark       |  2.859 μs | 0.0532 μs | 0.0547 μs |  2.869 μs |
+| Method                     | Mean     | Error     | StdDev    | Median   |
+|--------------------------- |---------:|----------:|----------:|---------:|
+| UsedBenchmark              | 4.690 μs | 0.0901 μs | 0.2140 μs | 4.678 μs |
+| LocalDictionariesBenchmark | 4.186 μs | 0.0837 μs | 0.1924 μs | 4.164 μs |
+| WithNoCachingBenchmark     | 3.747 μs | 0.0733 μs | 0.1163 μs | 3.776 μs |
+| WithTryAdd                 | 2.988 μs | 0.0715 μs | 0.1956 μs | 2.925 μs |
+| WithCachingBenchmark       | 3.190 μs | 0.0793 μs | 0.2261 μs | 3.122 μs |
