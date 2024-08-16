@@ -40,7 +40,7 @@ internal class Program
 Host.CreateDefaultBuilder(args)
 .ConfigureServices((hostContext, services) =>
 {
-    services.AddScoped<IFrequencyCalculator, FrequecyCalculator>();
+    services.AddScoped<IFrequencyCalculator, FrequencyCalculator>();
     services.AddScoped<IHelper, Helper>();
 });
 }

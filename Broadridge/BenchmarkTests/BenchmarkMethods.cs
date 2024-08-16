@@ -11,13 +11,31 @@ namespace BenchmarkTests
         private readonly MemoryCache wordCache = MemoryCache.Default;
 
         [Benchmark]
+        public List<KeyValuePair<string, int>> UsedBenchmark()
+        {
+            string filePath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "TestBenchmark.txt");
+            var words = SplitWords(filePath);
+            var FrequecyCalculatorService = new FrequencyCalculator();
+            return FrequecyCalculatorService.WordFrequencyCalculator(words);
+        }
+
+        [Benchmark]
+        public List<KeyValuePair<string, int>> LocalDictionariesBenchmark()
+        {
+            string filePath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "TestBenchmark.txt");
+            var words = SplitWords(filePath);
+            var FrequecyCalculatorService = new FrequencyCalculator();
+            return FrequecyCalculatorService.WordFrequencyCalculator(words);
+        }
+
+        [Benchmark]
         public List<KeyValuePair<string, int>> WithNoCachingBenchmark()
         {
             string filePath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "TestBenchmark.txt");
             var words = SplitWords(filePath);
+            var filteredWords = words.Where(word => !string.IsNullOrWhiteSpace(word));
 
             return WordFrequencyCalculatorWithCaching(words);
-
         }
 
         [Benchmark]
@@ -33,7 +51,7 @@ namespace BenchmarkTests
         [Benchmark]
         public List<KeyValuePair<string, int>> WithCachingBenchmark()
         {
-            var FrequecyCalculatorService = new FrequecyCalculator();
+            var FrequecyCalculatorService = new FrequencyCalculator();
             string filePath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "TestBenchmark.txt");
             var words = SplitWords(filePath);
 
@@ -41,6 +59,47 @@ namespace BenchmarkTests
 
         }
 
+
+        public List<KeyValuePair<string, int>> LocalDictionaries(string[] words)
+        {
+
+            var wordsByFrequency = new ConcurrentDictionary<string, int>(StringComparer.OrdinalIgnoreCase);
+            var localDictionaries = new ConcurrentBag<Dictionary<string, int>>();
+
+            // Filter out empty or whitespace-only strings before processing
+            var filteredWords = words.Where(word => !string.IsNullOrWhiteSpace(word));
+
+            Parallel.ForEach(filteredWords, () => new Dictionary<string, int>(StringComparer.OrdinalIgnoreCase), (word, state, localDict) =>
+            {
+                if (localDict.ContainsKey(word))
+                {
+                    localDict[word]++;
+                }
+                else
+                {
+                    localDict[word] = 1;
+                }
+                return localDict;
+            },
+            localDict =>
+            {
+                localDictionaries.Add(localDict);
+            });
+
+            // Join results from local dictionaries
+            var finalDictionary = new ConcurrentDictionary<string, int>(StringComparer.OrdinalIgnoreCase);
+            foreach (var localDict in localDictionaries)
+            {
+                foreach (var kvp in localDict)
+                {
+                    finalDictionary.AddOrUpdate(kvp.Key, kvp.Value, (key, oldValue) => oldValue + kvp.Value);
+                }
+            }
+
+            return finalDictionary.OrderBy(x => x.Key).ThenBy(x => x.Value).ToList();
+
+
+        }
 
         public List<KeyValuePair<string, int>> WordFrequencyCalculator(string[] words)
         {

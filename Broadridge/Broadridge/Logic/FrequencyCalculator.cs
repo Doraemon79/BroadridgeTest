@@ -6,7 +6,7 @@ namespace Broadridge.Logic
     /// <summary>
     /// class to handle the frequency of words
     /// </summary>
-    public class FrequecyCalculator : IFrequencyCalculator
+    public class FrequencyCalculator : IFrequencyCalculator
     {
         /// <summary>
         /// I tried with cache  but with a concurrent dictionary it is faster
@@ -19,16 +19,18 @@ namespace Broadridge.Logic
         {
 
             var wordsByFrequency = new ConcurrentDictionary<string, int>(StringComparer.OrdinalIgnoreCase);
+            var localDictionaries = new ConcurrentBag<Dictionary<string, int>>();
 
-            //by using tryAdd I reduce the updates to the dictionary
-            Parallel.ForEach(words, word =>
+            // Filter out empty or whitespace-only strings before processing
+            var filteredWords = words.Where(word => !string.IsNullOrWhiteSpace(word));
+
+            Parallel.ForEach(filteredWords, word =>
             {
-                if (!wordsByFrequency.TryAdd(word, 1))
-                {
+                wordsByFrequency.AddOrUpdate(word, 1, (key, oldValue) => oldValue + 1);
 
-                    wordsByFrequency.TryUpdate(word, wordsByFrequency[word] + 1, wordsByFrequency[word]);
-                }
             });
+
+
 
             return [.. wordsByFrequency.OrderBy(x => x.Key).ThenBy(x => x.Value)];
         }
