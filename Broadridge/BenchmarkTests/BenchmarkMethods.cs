@@ -25,7 +25,7 @@ namespace BenchmarkTests
             string filePath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "TestBenchmark.txt");
             var words = SplitWords(filePath);
             var FrequecyCalculatorService = new FrequencyCalculator();
-            return FrequecyCalculatorService.WordFrequencyCalculator(words);
+            return WordFrequencyWithLocalDictionaries(words);
         }
 
         [Benchmark]
@@ -60,7 +60,7 @@ namespace BenchmarkTests
         }
 
 
-        public List<KeyValuePair<string, int>> LocalDictionaries(string[] words)
+        public List<KeyValuePair<string, int>> WordFrequencyWithLocalDictionaries(string[] words)
         {
 
             var wordsByFrequency = new ConcurrentDictionary<string, int>(StringComparer.OrdinalIgnoreCase);
